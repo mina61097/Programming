@@ -1,0 +1,8 @@
+print("program starting.\n")
+name = input("what is your name:")
+num1 = float(input("Enter a floating point number:"))
+num2 = float(input("Enter a second floating point number:"))
+product = round(num1 * num2 , 2)
+print (f"{name} you gave numbers {num1} and {num2}")
+print(f"Mutiplying frist and second number  will result in product {product}")
+print("program ending.")
