@@ -2,7 +2,7 @@ print("Program starting...")
 
 name = input("Enter your name: ")
 
-print("\nMenu:\n1 - Welcome\n0 - Exit")
+print("\nMenu:\nWelcome - 1\nExit - 0")
 choice = input("Your choice: ")
 
 if choice == "1":

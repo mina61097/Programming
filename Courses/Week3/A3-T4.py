@@ -37,5 +37,4 @@ Options:
         else:
             print("Invalid choice, please try again.")
 
-if name == "main":
-    menu()
+menu()

@@ -18,7 +18,7 @@ print("\nAdding integers together")
 total = first + second
 print(f"{first} + {second} = {total}")
 
-
+    
 print("\nChecking the parity of the sum...")
 if total % 2 == 0:
     print("Sum is even.")
