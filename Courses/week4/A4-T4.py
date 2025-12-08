@@ -1,18 +1,15 @@
 print("Program starting.")
 
-words = []
+word = input("Insert Word (Empty Stops): ")
+words = 0
+characters = 0
 
-while True:
-    word = input("Insert word (empty stops): ")
-    if word == "":
-        print("Close the loop.")
-        break
-    words.append(word)
+while(word != ""):
+    words += 1
+    characters += len(word)
+    word = input("Insert Word (Empty Stops): ")
 
-total_words = len(words)
-total_characters = sum(len(w) for w in words)
+print(f"{words} Words inserted!")
+print(f"{characters} Characters inserted!")  
 
-print("You inserted:")
-print(" -", total_words, "words")
-print(" -", total_characters, "characters")
 print("Program ending.")

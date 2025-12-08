@@ -1,21 +1,13 @@
-"""Prints the given word inside a decorative frame."""
-    frame_length = len(PWord) + 4 # 2 spaces + 2 stars
-    print('*' * frame_length)
-    print(f"* {PWord} *")
-    print('*' * frame_length)
-    return None
+print("Program starting.")
+
+start = int(input("Insert starting value: "))
+stop = int(input("Insert stopping value: "))
 
 
-def main():
-    """Main function of the program."""
-    print("Program starting.")
-    print() # Empty line
-    word = input("Insert word: ")
-    frameWord(word)
-    print()
-    print("Program ending.")
-    return None
+for i in range(start, stop + 1):
+    if (i != stop):
+        print(i, end=" ")
+    else:
+        print(i)
 
-
-if __name__ == "__main__":
-    main()
+print("Program ending.")

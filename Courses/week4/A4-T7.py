@@ -1,45 +1,33 @@
-# Constant for separating words
-DELIMITER = ','
+print("Program starting.")
+print("\nCheck multiplicative persistence.")
 
+n = input("Insert an integer: ")
 
-def collectWords() -> str:
-    """Collects words from user input separated by DELIMITER and returns them as one string."""
-    words = []
-    while True:
-        word = input("Insert word(empty stops): ")
-        if word == "":
-            break
-        words.append(word)
-    return DELIMITER.join(words)
+# Handle negative
+if n[0] == '-':
+    n = n[1:]
+    print("(Using absolute value)")
 
+count = 0
 
-def analyseWords(PWords: str) -> None:
-    """Analyses the given words string and prints word count, total characters, and average word length."""
-    if not PWords:
-        print("- 0 Words")
-        print("- 0 Characters")
-        print("- 0.00 Average word length")
-        return
+while len(n) > 1:
+    count += 1
+    
+    # Multiply all digits
+    total = 1
+    for digit in n:
+        total *= int(digit)
+    
+    # Show the step
+    print(" * ".join(n) + " = " + str(total))
+    
+    # Next number
+    n = str(total)
 
-    word_list = PWords.split(DELIMITER)
-    word_count = len(word_list)
-    char_count = sum(len(w) for w in word_list)
-    avg_length = char_count / word_count
+if count > 0:
+    print("No more steps.")
+    print(f"\nThis program took {count} step(s)")
+else:
+    print("Already a single digit.")
 
-    print(f"- {word_count} Words")
-    print(f"- {char_count} Characters")
-    print("- {:.2f} Average word length".format(avg_length))
-    return None
-
-
-def main():
-    """Main function to control the program flow."""
-    print("Program starting.")
-    words = collectWords()
-    analyseWords(words)
-    print("Program ending.")
-    return None
-
-
-if __name__ == "__main__":
-    main()
+print("\nProgram ending.")
