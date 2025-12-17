@@ -36,6 +36,4 @@ def main():
     print("#### Number analysis END ####")
     print("Program ending.")
 
-
-if __name__ == "__main__":
-    main()
+main()

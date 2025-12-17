@@ -40,6 +40,4 @@ def main():
 
     print("Program ending.")
 
-
-if __name__ == "__main__":
-    main()
+main()
