@@ -4,5 +4,4 @@ def main():
     print("Program-ending.")
     return None # explicitly returning None
 
-if __name__ == "__main__":
-    main()
+main()
